@@ -14,12 +14,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSliderModule} from '@angular/material/slider';
 
 import { MatCardModule } from '@angular/material/card';
-
+import { FormComponent } from './form/form.component';
+import {ErrorStateMatcher} from '@angular/material/core';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     MatCardModule,
     MatSliderModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
