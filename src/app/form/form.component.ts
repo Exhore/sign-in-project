@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { FormGroupDirective } from '@angular/forms';
-import { NgForm, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
   selector: 'app-form',
@@ -10,14 +12,24 @@ import { ErrorStateMatcher } from '@angular/material/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+  hide = true;
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  passwordFormControl = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(20),
+  Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]);
 
-  matcher = new ErrorStateMatcher();
-}
 
-export class ErrorStateMatcherExample implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  getErrorEmail() {
+    if (this.emailFormControl.hasError('required')) {
+      return 'You must enter a value';
+    }
+    return this.emailFormControl.hasError('email') ? 'Not a valid email' : '';
+  }
+
+
+  getErrorPassword() {
+    if (this.passwordFormControl.hasError('required')) {
+      return 'Must be a valid password';
+    }
+    return this.passwordFormControl.hasError('password') ? 'Not a valid password' : '';
   }
 }

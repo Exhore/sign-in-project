@@ -1,5 +1,5 @@
 <section>
-  <div class="example-button-row">
+  <div class="trial-button-row">
     <button mat-raised-button color="primary">
       <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
     </button>
@@ -7,26 +7,35 @@
 </section>
 
 <!-- FORMULARIO -->
-<form class="example-form">
-  <mat-form-field class="example-full-width">
+<form class="form">
+  <mat-form-field class="data-full-width">
     <mat-label>Name</mat-label>
     <input matInput>
   </mat-form-field>
-  <mat-form-field class="example-full-width">
+  <mat-form-field class="data-full-width">
     <mat-label>Surname</mat-label>
     <input matInput>
   </mat-form-field>
 
-  <p>
-    <mat-form-field class="example-full-width">
-      <mat-label>Address</mat-label>
-      <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+  <div class="email-container">
+    <mat-form-field>
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="reichel@zonzamas.com" [formControl]="emailFormControl" required>
+      <mat-error *ngIf="emailFormControl.invalid">{{getErrorEmail()}}</mat-error>
     </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Address 2</mat-label>
-      <textarea matInput></textarea>
+  </div>
+  <div class="password-container">
+    <mat-form-field>
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'"[formControl]="passwordFormControl" required>
+      <mat-error *ngIf="passwordFormControl.invalid">{{getErrorPassword()}}</mat-error>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
     </mat-form-field>
-  </p>
+  </div>
+
 </form>
 
 

@@ -1,9 +1,17 @@
-.example-form {
+.form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
 }
 
-.example-full-width {
+.data-full-width {
+  width: 100%;
+}
+
+.email-container mat-form-field {
+  width: 100%;
+}
+
+.password-container mat-form-field {
   width: 100%;
 }
