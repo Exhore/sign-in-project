@@ -12,8 +12,7 @@ import { Validators } from '@angular/forms';
 export class FormComponent {
   hide = true;
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  passwordFormControl = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(20),
-  Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]);
+  passwordFormControl = new FormControl('', [Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,20}')]);
 
 
   getErrorEmail() {
