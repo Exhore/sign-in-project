@@ -15,13 +15,17 @@ import {MatSliderModule} from '@angular/material/slider';
 
 import { MatCardModule } from '@angular/material/card';
 import { FormComponent } from './form/form.component';
+import { BlueTrialComponent } from './blue-trial/blue-trial.component';
+import { PinkTrialComponent } from './pink-trial/pink-trial.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    FormComponent
+    FormComponent,
+    BlueTrialComponent,
+    PinkTrialComponent
   ],
   imports: [
     BrowserModule,

@@ -1,51 +1,35 @@
 <!-- mat icons -->
-<link href=
-"https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
-        rel="stylesheet">
-
-        <!-- move to another component -->
-<section>
-  <div class="trial-button-row">
-    <button mat-raised-button color="primary">
-      <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
-    </button>
-  </div>
-</section>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
 
 <!-- form component -->
+
 <form class="form">
-  <mat-form-field class="data-full-width">
+  <mat-form-field class="fname">
     <mat-label>Name</mat-label>
     <input matInput>
   </mat-form-field>
-  <mat-form-field class="data-full-width">
+  <mat-form-field class="lname">
     <mat-label>Surname</mat-label>
     <input matInput>
   </mat-form-field>
 
-  <div class="email-container">
+  <div class="email">
     <mat-form-field>
       <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="reichel@zonzamas.com" [formControl]="emailFormControl" required>
+      <input matInput placeholder="reichel@zonzamas.com" [formControl]="emailFormControl" required autocomplete="email">
       <mat-error *ngIf="emailFormControl.invalid">{{getErrorEmail()}}</mat-error>
     </mat-form-field>
   </div>
-  <div class="password-container">
+  <div class="password">
     <mat-form-field>
       <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'"[formControl]="passwordFormControl" required>
+      <input matInput [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl" required>
       <mat-error *ngIf="passwordFormControl.invalid">{{getErrorPassword()}}</mat-error>
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
         [attr.aria-pressed]="hide">
-        <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
   </div>
-
+  <app-pink-trial></app-pink-trial>
 </form>
-
-<!-- this is another component -->
-<section>
-  <button mat-raised-button color="accent">CLAIM YOUR FREE TRIAL</button>
-  <p>By clicking the button, you are agreeing to our <b><a>Terms of Services</a></b></p>
-</section>
