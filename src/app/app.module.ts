@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { FormComponent } from './form/form.component';
 import { BlueTrialComponent } from './blue-trial/blue-trial.component';
 import { PinkTrialComponent } from './pink-trial/pink-trial.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SegundaPaginaComponent } from './segunda-pagina/segunda-pagina.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { PinkTrialComponent } from './pink-trial/pink-trial.component';
     LandingPageComponent,
     FormComponent,
     BlueTrialComponent,
-    PinkTrialComponent
+    PinkTrialComponent,
+    SegundaPaginaComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { PinkTrialComponent } from './pink-trial/pink-trial.component';
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatSliderModule
+    MatSliderModule,
+    AppRoutingModule
 
   ],
   providers: [],

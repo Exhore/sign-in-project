@@ -6,13 +6,11 @@
 
 
 body {
-  margin-top: 11rem;
+  margin-top: 15rem;
   margin-left: 9.5rem;
   font-size: 16px;
   background-color: hsl(0, 100%, 74%);
   background-image: url("./assets/landing-content/images/bg-intro-desktop.png");
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   color: white;
 }
@@ -20,17 +18,12 @@ body {
 
 @media screen and (max-width: 1040px) {
   body {
-    margin-top: 0;
-    margin-left: 0;
-    margin: 2rem;
-    color: white;
+    margin: 5rem;
     font-size: 12px;
     background-color: hsl(0, 100%, 74%);
     background-image: url("./assets/landing-content/images/bg-intro-mobile.png");
-    text-align: center;
     justify-content: center;
     gap: .5rem;
-    padding: .5rem;
-    height: auto;
+
   }
 }

@@ -1,0 +1,18 @@
+.form,
+button {
+  width: 100%;
+  box-shadow: 0 5px hsla(249, 10%, 26%, 0.2);
+}
+
+p {
+  font-size: 10px;
+  margin: 0 auto;
+  color: #d6d4df;
+  font-weight: 100;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+p b {
+  color: hsl(0, 100%, 74%)
+}
