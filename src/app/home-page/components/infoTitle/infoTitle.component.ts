@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class infoTitleComponent implements OnInit {
 
   ngOnInit(): void {
-    // Initialization logic goes here
   }
 
 }

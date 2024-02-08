@@ -15,22 +15,17 @@ import { MatCardModule } from '@angular/material/card';
 
 // components
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { BlueTrialComponent } from './blue-trial/blue-trial.component';
-import { PinkTrialComponent } from './pink-trial/pink-trial.component';
+import { FormComponent } from './home-page/components/form/form.component';
+import { BlueTrialComponent } from './home-page/components/blue-trial/blue-trial.component';
+import { PinkTrialComponent } from './home-page/components/pink-trial/pink-trial.component';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { SecondPageComponent } from './second-page/second-page.component';
-import { infoTitleComponent } from './infoTitle/infoTitle.component';
+import { infoTitleComponent } from './home-page/components/infoTitle/infoTitle.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
+// route module
+import { AppRoutingModule } from './app-routing.module';
 
-
-// routes
-const routes: Routes = [
-  { path: '', component: HomePageComponent },
-  { path: 'GifSearch', component: SecondPageComponent }
-];
 
 
 @NgModule({
@@ -55,7 +50,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatCardModule,
     MatSliderModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
