@@ -25,35 +25,41 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 // route module
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
+
+// gifs module
+import { GifsModule } from "./gifs/gifs.module";
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormComponent,
-    infoTitleComponent,
-    BlueTrialComponent,
-    PinkTrialComponent,
-    SecondPageComponent,
-    HomePageComponent
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    MatIconModule,
-    MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatSliderModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        FormComponent,
+        infoTitleComponent,
+        BlueTrialComponent,
+        PinkTrialComponent,
+        SecondPageComponent,
+        HomePageComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        MatIconModule,
+        MatFormFieldModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatSliderModule,
+        AppRoutingModule,
+        SharedModule,
+        GifsModule
+    ]
 })
 export class AppModule { }
 
