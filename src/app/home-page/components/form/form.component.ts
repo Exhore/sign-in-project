@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Validators } from '@angular/forms';
+import { Component} from '@angular/core';
+import { FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -13,7 +12,6 @@ export class FormComponent {
   hide = true;
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   passwordFormControl = new FormControl('', [Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,20}')]);
-
 
   getErrorEmail() {
     if (this.emailFormControl.hasError('required')) {

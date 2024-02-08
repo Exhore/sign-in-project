@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-blue-trial',
@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./blue-trial.component.scss']
 })
 export class BlueTrialComponent {
-
 }
