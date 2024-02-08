@@ -12,7 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
-
+import { HttpClientModule } from '@angular/common/http';
 // components
 import { AppComponent } from './app.component';
 import { FormComponent } from './home-page/components/form/form.component';
@@ -58,7 +58,8 @@ import { GifsModule } from "./gifs/gifs.module";
         MatSliderModule,
         AppRoutingModule,
         SharedModule,
-        GifsModule
+        GifsModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }
